@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    background: #F5F5F5; 
+}
+
+.botoes {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* ---- Efeito 1 ---- */
+
+.efeito1 {
+    padding: 1rem 2rem;
+    margin: 20px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid #F7887C;
+    font-size: 1.2rem;
+    color: #D2691E;
+    cursor: pointer;
+    position: relative;
+}
+
+/* ---- Botão 1 ---- */
+
+.btn1::before {
+    content: '';
+    position: absolute;
+    background:#F7887C;
+    border-radius: 5px;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s linear;
+}
+
+.btn1:hover::before {
+    width: 100%;
+}
+
+/* ---- Botão 2 ---- */
+
+.btn2::before {
+    content: '';
+    position: absolute;
+    background: #F7887C;
+    border-radius: 5px;
+    transform: scaleX(0);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s linear;
+    transform-origin: right;
+}
+
+.btn2:hover::before {
+    transform: scaleX(1);
+}
+
+/* ---- Botão 3 ---- */
+
+.btn3::before {
+    content: '';
+    position: absolute;
+    background: #F7887C;
+    border-radius: 5px;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s linear;
+}
+
+.btn3:hover::before {
+    height: 100%;
+}
+
+/* ---- Botão 4 ---- */
+
+.btn4::before{
+    content: '';
+    position: absolute;
+    background: #F7887C;
+    border-radius: 5px;
+    transform: scaleY(0);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s linear;
+    transform-origin: bottom;
+}
+
+.btn4:hover::before{
+    transform: scaleY(1);
+}
+
+/* ---- Botão 5 ---- */
+
+.btn5::before{
+    content: '';
+    position: absolute;
+    background: #F7887C;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 0;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+
+.btn5:hover::before{
+    height: 100%;
+}
+
+/* ---- Botão 6 ---- */
+
+.btn6::before{
+    content: '';
+    position: absolute;
+    background: #F7887C;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+
+.btn6:hover::before{
+    width: 100%;
+}
+
+/* ---- Efeito 2 ---- */
+
+.efeito2 {
+    padding: 1rem 4rem;
+    margin: 20px;
+    cursor: pointer;
+    position: relative;
+    font-size: 1rem;
+    color: #696969;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+/* ---- Botão 7 ---- */
+
+.btn7::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    z-index: 1;
+    opacity: 0;
+    background:transparent;
+    transition: all .5s;
+    border-top: 2px solid #696969;
+    border-bottom: 2px solid #696969;
+    transform: scale(0, 1);
+}
+
+.btn7:hover::before {
+    opacity: 1;	
+    transform: scale(1, 1);	
+}
+
+/* ---- Botão 8 ---- */
+
+.btn8::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s;
+    border-top: 2px solid #696969;
+    border-bottom: 2px solid #696969;
+    transform: scale(1,1.5);
+}
+
+.btn8:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+/* ---- Botão 9 ---- */
+
+.btn9::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    height: 60%;
+    z-index: 1;
+    opacity: 1;
+    transition: all .3s;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    transform: rotate(0deg);
+}
+
+.btn9:hover::before {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    opacity: 1;
+    top: 0;
+    left: 40%;
+    width: 30%;
+    height: 100%;
+    transform: rotate(90deg);
+}
+
+/* ---- Botão 10 ---- */
+
+.btn10::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s;
+    border: 1px solid #696969;
+    transform: scale(0.5,0.5);
+}
+
+.btn10:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+}
